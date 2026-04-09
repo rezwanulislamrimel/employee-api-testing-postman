@@ -15,13 +15,13 @@
 
 <br/>
 
-[📖 Documentation](#-api-documentation) · [🚀 Quick Start](#-quick-start) · [📊 Test Coverage](#-testing-coverage) · [📂 Project Structure](#-project-structure)
+[ Documentation](#-api-documentation) · [ Quick Start](#-quick-start) · [ Test Coverage](#-testing-coverage) · [ Project Structure](#-project-structure)
 
 </div>
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 1. [Project Overview](#-project-overview)
 2. [Tech Stack](#%EF%B8%8F-tech-stack)
@@ -47,7 +47,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Tool | Purpose |
 | :--- | :--- | :--- |
@@ -61,7 +61,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 
 ## 🧪 Testing Coverage
 
-### 🔐 1. Authentication & Security
+###  1. Authentication & Security
 
 | Type | Scenario |
 | :--- | :--- |
@@ -69,7 +69,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 | ❌ Negative | Unauthorized access handling |
 | ❌ Negative | Invalid credential validation |
 
-### 🔁 2. Dynamic CRUD Operations
+###  2. Dynamic CRUD Operations
 
 | Operation | Details |
 | :--- | :--- |
@@ -78,7 +78,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 | **Update** | Selectively patches Mobile Number and Position fields |
 | **Delete** | Validates resource removal and confirms `404` post-deletion |
 
-### ✔️ 3. Validation & Assertions
+###  3. Validation & Assertions
 
 | Assertion Type | Description |
 | :--- | :--- |
@@ -89,7 +89,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 
 ---
 
-## 📊 Test Execution Summary
+##  Test Execution Summary
 
 | Metric | Details |
 | :--- | :--- |
@@ -101,7 +101,7 @@ This project provides a full-featured automation suite for testing a RESTful Emp
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -135,11 +135,11 @@ newman run collections/employee_api_tests.json \
   --reporter-htmlextra-export ./reports/automation_dashboard.html
 ```
 
-> 💡 After execution, open `reports/automation_dashboard.html` in your browser to view the full interactive test dashboard.
+>  After execution, open `reports/automation_dashboard.html` in your browser to view the full interactive test dashboard.
 
 ---
 
-## 📋 API Documentation
+##  API Documentation
 
 | Resource | Link |
 | :--- | :--- |
@@ -153,7 +153,7 @@ newman run collections/employee_api_tests.json \
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 📦 employee-api-automation
