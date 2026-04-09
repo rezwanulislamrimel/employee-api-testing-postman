@@ -1,178 +1,109 @@
-# Employee REST API Testing (Postman + Newman)
+# <p align="center">🚀 Employee REST API Automation: Postman & Newman</p>
 
-## 📌 Project Overview
-
-This project demonstrates API testing for an Employee Management System using Postman.
-It includes 20+ test cases covering both positive and negative scenarios.
-
-The testing workflow includes:
-
-* Authentication (Login API)
-* Employee creation
-* Data validation
-* Update operations
-* Deletion operations
-* Query parameter validation
+<p align="center">
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
+  <img src="https://img.shields.io/badge/Newman-EF5B25?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/API_Testing-Automated-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
+</p>
 
 ---
 
-## 🛠 Tools & Technologies
-
-* Postman
-* Newman
-* Node.js
-* GitHub
+### 📖 Project Overview
+> [!IMPORTANT]
+> This project demonstrates a robust **API Testing Framework** for an Employee Management System. It features **20+ Automated Test Cases**, dynamic data generation, and CLI-based execution using Newman for seamless CI/CD integration.
 
 ---
 
-## 🌐 API Documentation
-
-Base API and endpoints are available here:
-https://documenter.getpostman.com/view/25113210/2sB3BLhSC1
-
----
-
-## ⚙️ Environment Setup
-
-* Environment Name: **TestEnv**
-* All requests and test cases are executed within this environment.
+## 🛠️ Tech Stack & Integration
+* **Core Tool:** `Postman` (Collection & Environment Management)
+* **CLI Runner:** `Newman` (Automation & CLI Execution)
+* **Scripting:** `JavaScript` (Pre-request & Test Scripts)
+* **Reporting:** `Newman-Reporter-HtmlExtra` / `CLI`
+* **Documentation:** `Postman Documenter`
 
 ---
 
-## ✅ Test Scenarios Covered
+## 🧪 Testing Coverage & Workflows
 
-### 1. Login API
+#### 🟦 **1. Authentication & Security**
+* **Positive:** Valid Login with JWT/Token retrieval.
+* **Negative:** Unauthorized access handling & invalid credential validation.
 
-* Valid login (positive)
-* Invalid credentials (negative)
-* Missing fields validation
-* Unauthorized access handling
+#### 🟧 **2. Dynamic CRUD Operations**
+* **Create:** Automated creation of **5 employees** using random data generators.
+* **Update:** Selective patching of Mobile Number and Position.
+* **Delete:** Resource cleanup validation and 404 verification post-deletion.
 
-### 2. Create Employee
-
-* Create 5 employees with random data:
-
-  * First Name
-  * Last Name
-  * Email
-  * Phone
-  * Department
-  * Position
-  * Salary
-* Validate successful creation (status code, response body)
-
-### 3. Get Employee Info
-
-* Retrieve created employees
-* Validate:
-
-  * Employee existence
-  * Correct department mapping
-
-### 4. Update Employee Info
-
-* Update:
-
-  * Mobile number
-  * Position
-* Validate updated response
-
-### 5. Delete Employee
-
-* Delete 1 employee
-* Validate:
-
-  * Successful deletion response
-  * Employee no longer exists
-
-### 6. Get Employees with Query Params
-
-* Fetch all employees
-* Validate total employee count
+#### 🟩 **3. Validation & Assertions**
+* **Schema Validation:** Verifying JSON structure and data types.
+* **Query Params:** Filtering and validating total record counts via query strings.
+* **Status Codes:** Strict adherence to REST standards (200, 201, 400, 401, 404).
 
 ---
 
-## 🧪 Test Cases
+## 📊 Test Execution Summary
 
-* Total Test Cases: **20+**
-* Includes:
-
-  * Positive scenarios
-  * Negative scenarios
-  * Edge cases
-
----
-
-## 📦 Postman Collection
-
-👉 Add your exported collection link here
-Example:
-
-```
-[Postman Collection](your-link-here)
-```
+| 📈 Metric | 📋 Details |
+| :--- | :--- |
+| **Total Test Cases** | <kbd>20+ Scenarios</kbd> |
+| **Environment** | `TestEnv` (Dynamic Variables) |
+| **Data Handling** | `Pre-request Scripts` for Random Data |
+| **Report Format** | `CLI`, `HTML (htmlextra)` |
 
 ---
 
-## 📊 Newman Report
+## 🚀 How to Run Locally
 
-Run tests using Newman:
-
-```bash
-newman run collection.json -e environment.json -r cli,html
-```
-
----
-
-## 📸 Newman Report Screenshots
-
-(Add screenshots here)
-
----
-
-## 📄 Postman Documentation
-
-👉 Add your published documentation link here
-
----
-
-## 📁 Project Structure
-
-```
-├── collection.json
-├── environment.json
-├── newman-report.html
-├── screenshots/
-└── README.md
-```
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository
-2. Install Newman:
-
+#### **1. Prerequisites**
+Ensure you have `Node.js` installed. Then, install Newman globally:
 ```bash
 npm install -g newman
+npm install -g newman-reporter-htmlextra
 ```
 
-3. Run the collection:
-
+#### **2. Execution**
+Run the following command to execute the collection and generate a premium report:
 ```bash
-newman run collection.json -e environment.json
+newman run collection.json -e environment.json -r cli,htmlextra --reporter-htmlextra-export ./reports/report.html
+```
+
+---
+
+## 🐞 Defect Management & Artifacts
+
+> [!NOTE]
+> All test data is randomly generated using JavaScript `Math.random()` and `Date.now()` logic within Postman to ensure unique test runs.
+
+* 📂 **[API Documentation](https://documenter.getpostman.com/view/25113210/2sB3BLhSC1):** Full endpoint definitions.
+* 📂 **[Postman Collection](./collection.json):** Exported JSON for local import.
+* 📂 **[Screenshots](./screenshots):** CLI execution proofs and HTML report dashboard.
+
+---
+
+## 📂 Repository Structure
+
+```text
+├── 📂 collections
+│   └── employee_api_tests.json
+├── 📂 environments
+│   └── test_env.json
+├── 📂 reports
+│   └── automation_dashboard.html
+└── 📄 README.md
 ```
 
 ---
 
 ## 👤 Author
 
-Rezwanul Islam Rimel – SQA Engineer
+**Rezwanul Islam**
+*SQA Engineer | API Automation Specialist*
+
+<p align="left">
+<a href="https://www.linkedin.com/in/rezwanulrimel/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://github.com/rezwanulislamrimel"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+</p>
 
 ---
-
-## 📌 Notes
-
-* All test data is randomly generated
-* Tests include assertions for status codes and response validation
-* Designed for learning and demonstration purposes
+<p align="center"><i>Maintained by Rezwanul Rimel © 2026</i></p>
