@@ -1,95 +1,171 @@
-# <p align="center">🚀 Employee REST API Automation: Postman & Newman</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
-  <img src="https://img.shields.io/badge/Newman-EF5B25?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/API_Testing-Automated-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
-</p>
+#  Employee REST API Automation
+### Postman · Newman · JavaScript
 
----
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+[![Newman](https://img.shields.io/badge/Newman-CLI_Runner-EF5B25?style=for-the-badge&logo=node.js&logoColor=white)](https://github.com/postmanlabs/newman)
+[![Node.js](https://img.shields.io/badge/Node.js-Required-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Tests](https://img.shields.io/badge/Test_Cases-20%2B_Automated-brightgreen?style=for-the-badge)](#-testing-coverage)
+[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
 
-### 📖 Project Overview
-> [!IMPORTANT]
-> This project demonstrates a robust **API Testing Framework** for an Employee Management System. It features **20+ Automated Test Cases**, dynamic data generation, and CLI-based execution using Newman for seamless CI/CD integration.
+<br/>
 
----
+> A production-ready **API Testing Framework** for an Employee Management System — featuring 20+ automated test cases, dynamic data generation, and CLI-based execution built for seamless CI/CD integration.
 
-## 🛠️ Tech Stack & Integration
-* **Core Tool:** `Postman` (Collection & Environment Management)
-* **CLI Runner:** `Newman` (Automation & CLI Execution)
-* **Scripting:** `JavaScript` (Pre-request & Test Scripts)
-* **Reporting:** `Newman-Reporter-HtmlExtra` / `CLI`
-* **Documentation:** `Postman Documenter`
+<br/>
+
+[📖 Documentation](#-api-documentation) · [🚀 Quick Start](#-quick-start) · [📊 Test Coverage](#-testing-coverage) · [📂 Project Structure](#-project-structure)
+
+</div>
 
 ---
 
-## 🧪 Testing Coverage & Workflows
+## 📌 Table of Contents
 
-#### 🟦 **1. Authentication & Security**
-* **Positive:** Valid Login with JWT/Token retrieval.
-* **Negative:** Unauthorized access handling & invalid credential validation.
+1. [Project Overview](#-project-overview)
+2. [Tech Stack](#%EF%B8%8F-tech-stack)
+3. [Testing Coverage](#-testing-coverage)
+4. [Test Execution Summary](#-test-execution-summary)
+5. [Quick Start](#-quick-start)
+6. [API Documentation](#-api-documentation)
+7. [Project Structure](#-project-structure)
+8. [Author](#-author)
 
-#### 🟧 **2. Dynamic CRUD Operations**
-* **Create:** Automated creation of **5 employees** using random data generators.
-* **Update:** Selective patching of Mobile Number and Position.
-* **Delete:** Resource cleanup validation and 404 verification post-deletion.
+---
 
-#### 🟩 **3. Validation & Assertions**
-* **Schema Validation:** Verifying JSON structure and data types.
-* **Query Params:** Filtering and validating total record counts via query strings.
-* **Status Codes:** Strict adherence to REST standards (200, 201, 400, 401, 404).
+## 🧩 Project Overview
+
+This project provides a full-featured automation suite for testing a RESTful Employee Management API. It covers the complete lifecycle of API interactions — from authentication and CRUD operations to schema validation and negative test scenarios — all executable from the command line with rich HTML reporting.
+
+**Key Highlights:**
+- ✅ 20+ test scenarios covering happy paths and edge cases
+- 🔄 Dynamic test data via JavaScript `Math.random()` and `Date.now()`
+- 📊 HTML dashboard reports generated automatically via `htmlextra`
+- 🔗 CI/CD-ready Newman CLI execution
+- 📋 Full Postman API documentation published online
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Tool | Purpose |
+| :--- | :--- | :--- |
+| **Test Design** | Postman | Collection & environment management |
+| **CLI Execution** | Newman | Automated, headless test runs |
+| **Scripting** | JavaScript | Pre-request scripts & assertions |
+| **Reporting** | newman-reporter-htmlextra | Visual HTML dashboards |
+| **Documentation** | Postman Documenter | Published API reference |
+
+---
+
+## 🧪 Testing Coverage
+
+### 🔐 1. Authentication & Security
+
+| Type | Scenario |
+| :--- | :--- |
+| ✅ Positive | Valid login with JWT/token retrieval |
+| ❌ Negative | Unauthorized access handling |
+| ❌ Negative | Invalid credential validation |
+
+### 🔁 2. Dynamic CRUD Operations
+
+| Operation | Details |
+| :--- | :--- |
+| **Create** | Auto-creates **5 employees** using randomized data per run |
+| **Read** | Retrieves single and paginated employee records |
+| **Update** | Selectively patches Mobile Number and Position fields |
+| **Delete** | Validates resource removal and confirms `404` post-deletion |
+
+### ✔️ 3. Validation & Assertions
+
+| Assertion Type | Description |
+| :--- | :--- |
+| **Schema Validation** | Verifies JSON structure and field data types |
+| **Query Parameters** | Filters records and validates total count via query strings |
+| **Status Codes** | Enforces REST standards — `200`, `201`, `400`, `401`, `404` |
+| **Response Time** | Flags responses exceeding acceptable thresholds |
 
 ---
 
 ## 📊 Test Execution Summary
 
-| 📈 Metric | 📋 Details |
+| Metric | Details |
 | :--- | :--- |
-| **Total Test Cases** | <kbd>20+ Scenarios</kbd> |
-| **Environment** | `TestEnv` (Dynamic Variables) |
-| **Data Handling** | `Pre-request Scripts` for Random Data |
-| **Report Format** | `CLI`, `HTML (htmlextra)` |
+| **Total Test Cases** | `20+` Scenarios |
+| **Execution Mode** | Newman CLI |
+| **Environment** | `TestEnv` with dynamic variable injection |
+| **Data Strategy** | Pre-request scripts with randomized payloads |
+| **Report Formats** | CLI output + HTML dashboard (htmlextra) |
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Quick Start
 
-#### **1. Prerequisites**
-Ensure you have `Node.js` installed. Then, install Newman globally:
+### Prerequisites
+
+Ensure [Node.js](https://nodejs.org/) is installed, then install Newman and the HTML reporter globally:
+
 ```bash
 npm install -g newman
 npm install -g newman-reporter-htmlextra
 ```
 
-#### **2. Execution**
-Run the following command to execute the collection and generate a premium report:
+### Clone the Repository
+
 ```bash
-newman run collection.json -e environment.json -r cli,htmlextra --reporter-htmlextra-export ./reports/report.html
+git clone https://github.com/rezwanulislamrimel/<your-repo-name>.git
+cd <your-repo-name>
 ```
 
+### Run Tests
+
+**CLI output only:**
+```bash
+newman run collections/employee_api_tests.json \
+  -e environments/test_env.json
+```
+
+**CLI + HTML report (recommended):**
+```bash
+newman run collections/employee_api_tests.json \
+  -e environments/test_env.json \
+  -r cli,htmlextra \
+  --reporter-htmlextra-export ./reports/automation_dashboard.html
+```
+
+> 💡 After execution, open `reports/automation_dashboard.html` in your browser to view the full interactive test dashboard.
+
 ---
 
-## 🐞 Defect Management & Artifacts
+## 📋 API Documentation
+
+| Resource | Link |
+| :--- | :--- |
+| 📘 Postman API Docs | [View Online](https://documenter.getpostman.com/view/25113210/2sB3BLhSC1) |
+| 📦 Postman Collection | [`collections/employee_api_tests.json`](./collections/employee_api_tests.json) |
+| ⚙️ Environment File | [`environments/test_env.json`](./environments/test_env.json) |
+| 📸 Report Screenshots | [`/screenshots`](./screenshots) |
 
 > [!NOTE]
-> All test data is randomly generated using JavaScript `Math.random()` and `Date.now()` logic within Postman to ensure unique test runs.
-
-* 📂 **[API Documentation](https://documenter.getpostman.com/view/25113210/2sB3BLhSC1):** Full endpoint definitions.
-* 📂 **[Postman Collection](./collection.json):** Exported JSON for local import.
-* 📂 **[Screenshots](./screenshots):** CLI execution proofs and HTML report dashboard.
+> All test data is dynamically generated per run using JavaScript `Math.random()` and `Date.now()` inside Postman pre-request scripts, ensuring no duplicate or stale data across executions.
 
 ---
 
-## 📂 Repository Structure
+## 📂 Project Structure
 
-```text
+```
+📦 employee-api-automation
 ├── 📂 collections
-│   └── employee_api_tests.json
+│   └── employee_api_tests.json       # Postman collection export
 ├── 📂 environments
-│   └── test_env.json
+│   └── test_env.json                 # Environment variables
 ├── 📂 reports
-│   └── automation_dashboard.html
+│   └── automation_dashboard.html     # Generated HTML report
+├── 📂 screenshots
+│   ├── cli_output.png                # Newman CLI execution proof
+│   └── html_report_dashboard.png     # HTML report preview
 └── 📄 README.md
 ```
 
@@ -98,12 +174,15 @@ newman run collection.json -e environment.json -r cli,htmlextra --reporter-htmle
 ## 👤 Author
 
 **Rezwanul Islam**
-*SQA Engineer | API Automation Specialist*
+*SQA Engineer · API Automation Specialist*
 
-<p align="left">
-<a href="https://www.linkedin.com/in/rezwanulrimel/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="https://github.com/rezwanulislamrimel"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-</p>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rezwanulrimel/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rezwanulislamrimel)
 
 ---
-<p align="center"><i>Maintained by Rezwanul Rimel © 2026</i></p>
+
+<div align="center">
+
+*Maintained with ❤️ by Rezwanul Rimel · © 2026*
+
+</div>
